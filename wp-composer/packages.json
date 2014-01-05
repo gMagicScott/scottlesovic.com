@@ -1,0 +1,228 @@
+{
+	"packages": {
+		"wordpress/wordpress": {
+			"dev-master": {
+				"name": "wordpress/wordpress",
+				"version": "dev-master",
+				"type": "webroot",
+				"source": {
+                    "url": "http://core.svn.wordpress.org/",
+                    "type": "svn",
+                    "reference": "trunk"
+                },
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.8.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.8.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.8.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.7.1": {
+				"name": "wordpress/wordpress",
+				"version": "3.7.1",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.7.1.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.7.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.7.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.7.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.6.1": {
+				"name": "wordpress/wordpress",
+				"version": "3.6.1",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.6.1.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.6.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.6.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.6.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.5.2": {
+				"name": "wordpress/wordpress",
+				"version": "3.5.2",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.5.2.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.5.1": {
+				"name": "wordpress/wordpress",
+				"version": "3.5.1",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.5.1.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.5.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.5.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.5.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.4.2": {
+				"name": "wordpress/wordpress",
+				"version": "3.4.2",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.4.2.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.4.1": {
+				"name": "wordpress/wordpress",
+				"version": "3.4.1",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.4.1.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.4.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.4.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.4.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.3.3": {
+				"name": "wordpress/wordpress",
+				"version": "3.3.3",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.3.3.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.3.2": {
+				"name": "wordpress/wordpress",
+				"version": "3.3.2",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.3.2.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.3.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.3.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.3.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.2.1": {
+				"name": "wordpress/wordpress",
+				"version": "3.2.1",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.2.1.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			},
+			"3.2.0": {
+				"name": "wordpress/wordpress",
+				"version": "3.2.0",
+				"type": "webroot",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.2.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				},
+				"license": "GPL-2.0"
+			}
+		}
+	}
+}
