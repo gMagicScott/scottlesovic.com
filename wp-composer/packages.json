@@ -19,9 +19,135 @@
                 },
                 "license": "GPL-2.0"
             },
+            "4.3.1": {
+                "name": "wordpress/wordpress",
+                "version": "4.3.1",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.3.1"
+                },
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-4.3.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.3.0": {
+                "name": "wordpress/wordpress",
+                "version": "4.3",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.3.0"
+                },
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-4.3.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.2.5": {
+                "name": "wordpress/wordpress",
+                "version": "4.2.5",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.2.5"
+                },
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-4.2.5.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.2.4": {
+                "name": "wordpress/wordpress",
+                "version": "4.2.4",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.2.4"
+                },
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-4.2.4.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.2.0": {
+                "name": "wordpress/wordpress",
+                "version": "4.2",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.2.0"
+                },
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-4.2.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.1.8": {
+                "name": "wordpress/wordpress",
+                "version": "4.1.8",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.1.8"
+                },
+                "dist": {
+                    "url": "http://wordpress.org/wordpress-4.1.8.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
+            "4.1.7": {
+                "name": "wordpress/wordpress",
+                "version": "4.1.7",
+                "type": "webroot",
+                "source": {
+                    "url": "git://core.git.wordpress.org/",
+                    "type": "git",
+                    "reference": "4.1.7"
+                },
+                "dist": {
+                    "url": "http://wordpress.org/wordpress-4.1.7.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                },
+                "license": "GPL-2.0"
+            },
             "4.1.0": {
                 "name": "wordpress/wordpress",
-                "version": "4.1.0",
+                "version": "4.1",
                 "type": "webroot",
                 "source": {
                     "url": "git://core.git.wordpress.org/",
