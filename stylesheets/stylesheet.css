@@ -337,6 +337,46 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #303030;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
+  color: #303030;
+}
+
+.social-link svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.social-link span {
+  font-size: 15px;
+  line-height: 1;
+}
+
 /* #Media Queries
 ================================================== */
 
@@ -361,6 +401,14 @@ footer a:hover {
   .inner {
     width: 94%;
     margin: 0 auto;
+  }
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .social-link {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
