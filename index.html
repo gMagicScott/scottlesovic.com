@@ -1,69 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Chivo:900"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="stylesheets/stylesheet.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="stylesheets/pygment_trac.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="stylesheets/print.css"
-      media="print"
-    />
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Scott Lesovic</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scott Lesovic - Magician, EMT, Creator</title>
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-31856187-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <style>
+      [x-cloak] { display: none !important; }
+    </style>
   </head>
 
-  <body>
-    <div id="container">
-      <div class="inner">
-        <header>
-          <h1>Scott Lesovic</h1>
-          <h2></h2>
-        </header>
+  <body
+    x-data="{
+      darkMode: localStorage.getItem('darkMode') === 'true',
+      currentYear: new Date().getFullYear()
+    }"
+    x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))"
+    :class="darkMode ? 'dark' : ''"
+    class="transition-colors duration-200"
+  >
+    <div class="min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-100">
 
-        <hr />
+      <!-- Dark Mode Toggle -->
+      <div class="fixed top-6 right-6 z-50">
+        <button
+          @click="darkMode = !darkMode"
+          class="p-3 rounded-full bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors shadow-lg"
+          aria-label="Toggle dark mode"
+        >
+          <svg x-show="!darkMode" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+          <svg x-show="darkMode" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+          </svg>
+        </button>
+      </div>
 
-        <section id="main_content">
-          <h3>
-            <a name="coming-soon" class="anchor" href="#coming-soon"
-              ><span class="octicon octicon-link"></span></a
-            >Socials
-          </h3>
-          <div class="social-links">
-            <a href="https://youtube.com/@gMagicScott" class="social-link youtube">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-rose-600 bg-clip-text text-transparent">
+            Scott Lesovic
+          </h1>
+          <p class="text-xl md:text-2xl text-stone-600 dark:text-stone-400 mb-8">
+            Magician. EMT. Creator of moments that matter.
+          </p>
+          <p class="text-lg text-stone-500 dark:text-stone-500 max-w-2xl mx-auto">
+            I believe in kindness, craft, and creating moments that leave people a little better than you found them.
+          </p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 px-4 bg-stone-100 dark:bg-stone-800">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">About Me</h2>
+          <div class="prose prose-lg prose-stone dark:prose-invert mx-auto">
+            <p class="text-lg leading-relaxed mb-6">
+              I'm an Eagle Scout turned EMT who moonlights as a magician. By day, I respond to emergencies and help people through some of their toughest moments. By night (and weekends), I create wonder and astonishment through sleight of hand and storytelling.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+              Whether I'm performing a card trick or responding to a 911 call, the goal is the same: to connect with people, make a difference, and leave things better than I found them.
+            </p>
+            <p class="text-lg leading-relaxed">
+              When I'm not working or performing, you'll find me at Disney parks, exploring the intersection of magic, storytelling, and experience design. Because at the end of the day, it's all about creating moments that matter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">What I Do</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Magic -->
+            <div class="p-8 rounded-lg bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950 dark:to-rose-950 border border-amber-200 dark:border-amber-800">
+              <div class="text-4xl mb-4">✨</div>
+              <h3 class="text-2xl font-bold mb-4 text-amber-900 dark:text-amber-100">Magic & Entertainment</h3>
+              <p class="text-stone-700 dark:text-stone-300 leading-relaxed">
+                Close-up magic and sleight of hand for events, parties, and special occasions. I specialize in intimate performances that create genuine moments of wonder and connection.
+              </p>
+            </div>
+
+            <!-- Emergency Medical Services -->
+            <div class="p-8 rounded-lg bg-gradient-to-br from-rose-50 to-amber-50 dark:from-rose-950 dark:to-amber-950 border border-rose-200 dark:border-rose-800">
+              <div class="text-4xl mb-4">🚑</div>
+              <h3 class="text-2xl font-bold mb-4 text-rose-900 dark:text-rose-100">Emergency Medical Services</h3>
+              <p class="text-stone-700 dark:text-stone-300 leading-relaxed">
+                Certified EMT providing emergency medical care and response. Trained to handle critical situations with calm, competence, and compassion.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Links Section -->
+      <section id="social" class="py-20 px-4 bg-stone-100 dark:bg-stone-800">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Connect With Me</h2>
+          <div class="flex flex-wrap justify-center gap-6">
+
+            <!-- YouTube -->
+            <a
+              href="https://youtube.com/@gMagicScott"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 px-6 py-4 bg-white dark:bg-stone-900 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-stone-200 dark:border-stone-700"
+            >
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
-              <span>YouTube</span>
+              <span class="font-semibold">YouTube</span>
             </a>
-            <a href="https://x.com/gMagicScott" class="social-link x">
+
+            <!-- X (Twitter) -->
+            <a
+              href="https://x.com/gMagicScott"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 px-6 py-4 bg-white dark:bg-stone-900 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-stone-200 dark:border-stone-700"
+            >
               <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="#000000" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                <path class="fill-stone-900 dark:fill-stone-100" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
-              <span>X</span>
+              <span class="font-semibold">X</span>
             </a>
-            <a href="https://www.instagram.com/gmagicscott" class="social-link instagram">
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/gmagicscott"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 px-6 py-4 bg-white dark:bg-stone-900 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-stone-200 dark:border-stone-700"
+            >
               <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="url(#instagram-gradient)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 <defs>
                   <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
                     <stop offset="0%" style="stop-color:#FD5;stop-opacity:1" />
@@ -71,20 +161,77 @@
                     <stop offset="100%" style="stop-color:#C837AB;stop-opacity:1" />
                   </linearGradient>
                 </defs>
+                <path fill="url(#instagram-gradient)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
-              <span>Instagram</span>
+              <span class="font-semibold">Instagram</span>
             </a>
-            <a href="https://www.threads.net/@gmagicscott" class="social-link threads">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="#000000" d="M12.186 3.998c-.43.01-.85.033-1.26.064-2.69.206-4.74 1.237-6.15 2.653-1.41 1.417-2.23 3.24-2.45 5.46-.04.41-.05.83-.03 1.24.02.48.07.96.16 1.42.57 3.02 2.39 5.28 5.14 6.38 1.79.72 3.77.89 5.69.49 2.93-.61 5.2-2.33 6.42-4.87.17-.36.32-.73.44-1.1.44-1.34.57-2.74.39-4.15-.31-2.39-1.39-4.37-3.06-5.59-1.27-.93-2.77-1.48-4.42-1.62-.41-.03-.83-.04-1.24-.04zm.18 1.81c.36 0 .73.01 1.08.04 1.37.12 2.57.57 3.56 1.33 1.35.99 2.24 2.58 2.51 4.49.15 1.09.05 2.18-.29 3.23-.1.3-.22.6-.35.88-.98 2.03-2.86 3.41-5.32 3.91-1.54.31-3.14.17-4.63-.42-2.22-.88-3.76-2.76-4.23-5.18-.07-.36-.11-.73-.13-1.1-.01-.31 0-.63.02-.95.18-1.8.87-3.37 2.08-4.59 1.21-1.21 2.93-2.09 5.18-2.27.36-.03.74-.04 1.11-.04zm.98 3.21c-.77 0-1.47.13-2.06.38-.97.42-1.67 1.18-2 2.18-.07.21-.12.43-.15.65-.06.49.09.93.43 1.28.33.34.76.51 1.24.51.48 0 .91-.17 1.24-.51.21-.21.35-.47.43-.75.03-.13.06-.26.11-.38.16-.37.45-.64.83-.78.22-.08.46-.12.71-.12.77 0 1.37.35 1.73.96.19.32.28.69.28 1.08 0 .47-.14.88-.41 1.21-.27.33-.64.57-1.08.7-.33.1-.68.15-1.04.15-1.42 0-2.55-.59-3.21-1.66-.44-.71-.66-1.54-.66-2.44 0-1.42.49-2.62 1.45-3.5.96-.88 2.18-1.32 3.59-1.32.89 0 1.73.19 2.48.56.45.22.86.49 1.22.81.34.31.41.75.19 1.15-.22.4-.65.59-1.09.47-.11-.03-.21-.08-.31-.13-.28-.18-.59-.33-.92-.44-.5-.17-1.05-.26-1.62-.26-.95 0-1.76.32-2.38.93-.62.61-.93 1.39-.93 2.29 0 .59.14 1.12.41 1.58.4.68 1.06 1.05 1.93 1.05.24 0 .47-.03.69-.09.28-.08.5-.21.65-.38.08-.09.14-.19.18-.3 0-.11-.03-.23-.08-.35-.13-.29-.39-.51-.74-.62-.18-.06-.38-.09-.59-.09-.43 0-.81.16-1.1.45-.18.18-.3.4-.37.65-.14.53-.58.89-1.12.89-.54 0-.98-.36-1.12-.89-.07-.25-.1-.52-.1-.8 0-.77.27-1.47.77-2.04.72-.82 1.75-1.25 3.01-1.25.85 0 1.63.21 2.29.6.66.4 1.16.96 1.47 1.66.21.47.32.99.32 1.53 0 .77-.21 1.47-.62 2.06-.61.88-1.54 1.44-2.68 1.63-.38.06-.77.09-1.17.09-2.06 0-3.73-.88-4.73-2.48-.67-1.07-1-2.32-1-3.69 0-1.94.67-3.58 1.99-4.81 1.32-1.23 3-1.85 4.95-1.85 1.22 0 2.36.26 3.37.77.61.31 1.17.69 1.66 1.14.49.45.55 1.15.15 1.68-.4.53-1.1.63-1.63.24-.14-.1-.27-.21-.4-.33-.36-.33-.77-.6-1.22-.81-.68-.32-1.44-.48-2.26-.48z"/>
-              </svg>
-              <span>Threads</span>
-            </a>
-          </div>
-        </section>
 
-        <footer>&copy; 2013 - 2025 Scott Lesovic. All rights reserved.</footer>
-      </div>
+            <!-- Threads -->
+            <a
+              href="https://www.threads.net/@gmagicscott"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 px-6 py-4 bg-white dark:bg-stone-900 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-stone-200 dark:border-stone-700"
+            >
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path class="fill-stone-900 dark:fill-stone-100" d="M12.186 3.998c-.43.01-.85.033-1.26.064-2.69.206-4.74 1.237-6.15 2.653-1.41 1.417-2.23 3.24-2.45 5.46-.04.41-.05.83-.03 1.24.02.48.07.96.16 1.42.57 3.02 2.39 5.28 5.14 6.38 1.79.72 3.77.89 5.69.49 2.93-.61 5.2-2.33 6.42-4.87.17-.36.32-.73.44-1.1.44-1.34.57-2.74.39-4.15-.31-2.39-1.39-4.37-3.06-5.59-1.27-.93-2.77-1.48-4.42-1.62-.41-.03-.83-.04-1.24-.04zm.18 1.81c.36 0 .73.01 1.08.04 1.37.12 2.57.57 3.56 1.33 1.35.99 2.24 2.58 2.51 4.49.15 1.09.05 2.18-.29 3.23-.1.3-.22.6-.35.88-.98 2.03-2.86 3.41-5.32 3.91-1.54.31-3.14.17-4.63-.42-2.22-.88-3.76-2.76-4.23-5.18-.07-.36-.11-.73-.13-1.1-.01-.31 0-.63.02-.95.18-1.8.87-3.37 2.08-4.59 1.21-1.21 2.93-2.09 5.18-2.27.36-.03.74-.04 1.11-.04zm.98 3.21c-.77 0-1.47.13-2.06.38-.97.42-1.67 1.18-2 2.18-.07.21-.12.43-.15.65-.06.49.09.93.43 1.28.33.34.76.51 1.24.51.48 0 .91-.17 1.24-.51.21-.21.35-.47.43-.75.03-.13.06-.26.11-.38.16-.37.45-.64.83-.78.22-.08.46-.12.71-.12.77 0 1.37.35 1.73.96.19.32.28.69.28 1.08 0 .47-.14.88-.41 1.21-.27.33-.64.57-1.08.7-.33.1-.68.15-1.04.15-1.42 0-2.55-.59-3.21-1.66-.44-.71-.66-1.54-.66-2.44 0-1.42.49-2.62 1.45-3.5.96-.88 2.18-1.32 3.59-1.32.89 0 1.73.19 2.48.56.45.22.86.49 1.22.81.34.31.41.75.19 1.15-.22.4-.65.59-1.09.47-.11-.03-.21-.08-.31-.13-.28-.18-.59-.33-.92-.44-.5-.17-1.05-.26-1.62-.26-.95 0-1.76.32-2.38.93-.62.61-.93 1.39-.93 2.29 0 .59.14 1.12.41 1.58.4.68 1.06 1.05 1.93 1.05.24 0 .47-.03.69-.09.28-.08.5-.21.65-.38.08-.09.14-.19.18-.3 0-.11-.03-.23-.08-.35-.13-.29-.39-.51-.74-.62-.18-.06-.38-.09-.59-.09-.43 0-.81.16-1.1.45-.18.18-.3.4-.37.65-.14.53-.58.89-1.12.89-.54 0-.98-.36-1.12-.89-.07-.25-.1-.52-.1-.8 0-.77.27-1.47.77-2.04.72-.82 1.75-1.25 3.01-1.25.85 0 1.63.21 2.29.6.66.4 1.16.96 1.47 1.66.21.47.32.99.32 1.53 0 .77-.21 1.47-.62 2.06-.61.88-1.54 1.44-2.68 1.63-.38.06-.77.09-1.17.09-2.06 0-3.73-.88-4.73-2.48-.67-1.07-1-2.32-1-3.69 0-1.94.67-3.58 1.99-4.81 1.32-1.23 3-1.85 4.95-1.85 1.22 0 2.36.26 3.37.77.61.31 1.17.69 1.66 1.14.49.45.55 1.15.15 1.68-.4.53-1.1.63-1.63.24-.14-.1-.27-.21-.4-.33-.36-.33-.77-.6-1.22-.81-.68-.32-1.44-.48-2.26-.48z"/>
+              </svg>
+              <span class="font-semibold">Threads</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Get In Touch</h2>
+          <p class="text-center text-lg text-stone-600 dark:text-stone-400 mb-12">
+            Have a question or want to work together? Drop me a message!
+          </p>
+
+          <!-- Notion Form Embed Placeholder -->
+          <div class="bg-stone-100 dark:bg-stone-800 rounded-lg p-8 border border-stone-200 dark:border-stone-700">
+            <div class="text-center text-stone-500 dark:text-stone-400">
+              <p class="mb-4">Contact form integration coming soon!</p>
+              <p class="text-sm">This will be replaced with a Notion form embed.</p>
+            </div>
+
+            <!-- Placeholder form for visual reference -->
+            <form class="mt-8 space-y-6 opacity-50 pointer-events-none">
+              <div>
+                <label class="block text-sm font-medium mb-2">Name</label>
+                <input type="text" class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-900" disabled />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-900" disabled />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Message</label>
+                <textarea rows="4" class="w-full px-4 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-900" disabled></textarea>
+              </div>
+              <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-amber-600 to-rose-600 text-white rounded-lg font-semibold" disabled>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 px-4 bg-stone-100 dark:bg-stone-800 border-t border-stone-200 dark:border-stone-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-stone-600 dark:text-stone-400">
+            &copy; 2013 - <span x-text="currentYear"></span> Scott Lesovic. All rights reserved.
+          </p>
+          <p class="text-sm text-stone-500 dark:text-stone-500 mt-2">
+            Built with kindness and craft.
+          </p>
+        </div>
+      </footer>
+
     </div>
   </body>
 </html>
